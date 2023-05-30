@@ -11,6 +11,7 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 router.get("/:id", async (req, res) => {
   try {
     const tags = await tags.findByPk(req.params.id);
@@ -38,7 +39,7 @@ router.put("/:id", async (req, res) => {
   try {
     const tags = await Tag.update(
       {
-        tag_name: req.body.tag_name,
+        tag_name: req.body.tag_name
       },
       {
         where: { id: req.body.id },
