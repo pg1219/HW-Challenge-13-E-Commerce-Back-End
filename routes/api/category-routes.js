@@ -32,7 +32,7 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     console.log(req.body);
-    const categories = await Category.create(req.body.category_name);
+    const categories = await Category.create(req.body);
     res.status(200).json(categories);
   } catch (err) {
     res.status(400).json(err);
@@ -41,14 +41,15 @@ router.post("/", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
   try {
-    const categories = await Category.update(
-    {
-      category_name: req.body.category_name
-    },
+    const categories = await Category.update(req.body, 
     {
       where: { id: req.body.id }
+    })
+    if (!categories) {
+      res.status(404).json({ message: "No category found with this ID" });
+      return;
     }
-    )
+    res
     res.status(200).json(categories)
   }
  catch (err) {
