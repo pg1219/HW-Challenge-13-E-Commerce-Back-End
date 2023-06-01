@@ -15,7 +15,7 @@ Create a back end for a e-commerce website that uses the latest technologies so 
 
 ## Links
 
-Walkthrough Video: 
+Walkthrough Video: https://drive.google.com/file/d/1TdsrS_1XrPCEQCtszvpCfMdRikYzHhWj/view
 
 Repo: https://github.com/pg1219/HW-Challenge-13-E-Commerce-Back-End
 
