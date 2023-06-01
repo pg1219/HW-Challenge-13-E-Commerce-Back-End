@@ -24,4 +24,4 @@ Repo: https://github.com/pg1219/HW-Challenge-13-E-Commerce-Back-End
 
 Preview image of deployed application
 
-![alt](./hw13mockup.png)
+![alt](./hw13mockup2.png)
